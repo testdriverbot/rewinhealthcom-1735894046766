@@ -1,0 +1,20 @@
+version: 4.1.32
+steps:
+  - prompt: Hover over the "Book a Demo" button.
+    commands:
+      - command: hover-text
+        text: Book a Demo
+        description: button in the top navigation bar
+        action: hover
+  - prompt: Click the "Book a Demo" button.
+    commands:
+      - command: hover-text
+        text: Book a Demo
+        description: button in the top navigation bar
+        action: click
+  - prompt: >-
+      Assert that the demo booking page or form displays correctly.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the demo booking form is visible
