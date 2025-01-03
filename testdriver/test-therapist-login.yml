@@ -1,0 +1,20 @@
+version: 4.1.32
+steps:
+  - prompt: Find the "Therapist Login" button on the website.
+    commands:
+      - command: hover-text
+        text: Therapist Login
+        description: therapist login button in the top right of the header
+        action: click
+  - prompt: Click the "Therapist Login" button.
+    commands:
+      - command: hover-text
+        text: Therapist Login
+        description: therapist login button in the top right of the header
+        action: click
+  - prompt: >-
+      Assert that the login page for therapists is displayed without errors.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the login page displays "Sign In"
